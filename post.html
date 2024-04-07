@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bootstarp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="dark-mode">
+      <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+          <path
+            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+          />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+          <path
+            d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+          />
+          <path
+            d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+          />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+          <path
+            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+          />
+        </symbol>
+      </svg>
+    </div>
+
+    <!-- * NAV BAR  -->
+
+    <nav class="navbar position-fixed w-100 navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img class="logo" src="imges/HomePage/logo.png" alt="" />
+        </a>
+
+        <div class="dropdown position-fixed dark mb-3 me-3 bd-mode-toggle">
+          <button
+            class="btn border-0 fs-4 dropdown-toggle d-flex align-items-center"
+            id="bd-theme"
+            type="button"
+            aria-expanded="false"
+            data-bs-toggle="dropdown"
+            aria-label="Toggle theme (auto)"
+          >
+            <svg
+              class="bi my-1 theme-icon-active ms-2"
+              width="1em"
+              height="1em"
+            >
+              <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+          </button>
+
+          <ul
+            class="dropdown-menu dropdown-menu-end shadow"
+            aria-labelledby="bd-theme-text"
+          >
+            <li>
+              <button
+                type="button"
+                class="dropdown-item d-flex align-items-center"
+                data-bs-theme-value="light"
+                aria-pressed="false"
+              >
+                <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                  <use href="#sun-fill"></use>
+                </svg>
+                Light
+                <svg class="bi ms-auto d-none" width="1em" height="1em">
+                  <use href="#check2"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="dropdown-item d-flex align-items-center"
+                data-bs-theme-value="dark"
+                aria-pressed="false"
+              >
+                <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                  <use href="#moon-stars-fill"></use>
+                </svg>
+                Dark
+                <svg class="bi ms-auto d-none" width="1em" height="1em">
+                  <use href="#check2"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="dropdown-item d-flex align-items-center active"
+                data-bs-theme-value="auto"
+                aria-pressed="true"
+              >
+                <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                  <use href="#circle-half"></use>
+                </svg>
+                Auto
+                <svg class="bi ms-auto d-none" width="1em" height="1em">
+                  <use href="#check2"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >الصفحة الرئيسة</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">مدونة</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                صفحات
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">صفحة 1</a></li>
+                <li><a class="dropdown-item" href="#">صفحة 2 </a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">صفحة3 </a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">عنا</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">خدمات</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">المشاريع</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">صالة عرض</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">اتصال</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- * NAV BAR  -->
+    <div class="py-5"></div>
+    <!-- Home -->
+
+    <section class="section-Breadcrumb">
+      <div class="container">
+        <div class="Breadcrumb">
+          <h1>مدونة</h1>
+          <div>
+            <a href="">الصفحة الرئيسية</a>
+            <span>/ مدونة</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main>
+      <div class="container">
+        <div class="row m-3">
+          <div class="col-md-8">
+            <img
+              width="100%"
+              src="imges/Pages/SingleBlog/single-blog-bg.jpg"
+              alt=""
+            />
+            <span class="my-2 d-block">
+              <i class="fa-solid fa-calendar-days"></i>
+              28 مايو 2021
+            </span>
+
+            <p>
+              الويب هو عالم رقمي مدهش يشكل شبكة عملاقة من المعلومات والخدمات عبر
+              الإنترنت. إنه عبارة عن منصة تفاعلية تتيح للمستخدمين الوصول إلى
+              مجموعة متنوعة من المحتوى والتفاعل معه، سواء كان ذلك عبر المواقع
+              الإلكترونية، الوسائط الاجتماعية، التطبيقات عبر الويب، أو حتى
+              الخدمات السحابية. في الآونة الأخيرة، شهد الويب تطورات هائلة جعلته
+              يتطور بسرعة ويتغير باستمرار. من الويب 1.0 الثابت الذي كان يتكون في
+              الأساس من صفحات HTML بسيطة، إلى الويب 2.0 الديناميكي الذي جلب
+              التفاعل والمشاركة من خلال تقنيات مثل AJAX ومواقع التواصل
+              الاجتماعي، وصولاً إلى الويب 3.0 المستقبلي الذي يتميز بالذكاء
+              الاصطناعي والحوسبة السحابية والواقع المعزز. يعتمد الويب على مجموعة
+              من التقنيات والبروتوكولات لتمكين التفاعل بين المستخدمين والخوادم،
+              مثل HTML (لتنسيق الصفحات الإلكترونية)، CSS (لتنسيق التصميم
+              والمظهر)، و JavaScript (لإضافة الديناميكية والتفاعلية إلى
+              الصفحات). بالإضافة إلى ذلك، تعتمد تطبيقات الويب على العديد من
+              التقنيات الحديثة مثل AngularJS وReactJS وVue.js لتحقيق تفاعل أفضل
+              وتجربة مستخدم محسنة. من خلال الويب، يمكن للأفراد والشركات تقديم
+              خدمات ومعلومات متنوعة بسهولة وفعالية. فمثلاً، يمكن للشركات إنشاء
+              مواقع إلكترونية لعرض منتجاتها وخدماتها، وتوفير وسائل للتواصل مع
+              العملاء، وحتى بيع المنتجات عبر الإنترنت. بينما يمكن للأفراد
+              استخدام الويب للتواصل مع الأصدقاء والعائلة، والبحث عن المعلومات
+              التي يحتاجونها في حياتهم اليومية. ومع تزايد استخدام الهواتف الذكية
+              والأجهزة اللوحية، أصبح الويب أكثر ملاءمة وتوافقًا مع هذه الأجهزة،
+              حيث تطورت تقنيات الاستجابة التي تجعل المواقع تتكيف مع حجم الشاشة
+              المستخدمة، مما يوفر تجربة مستخدم مرنة وسلسة. بشكل عام، الويب ليس
+              مجرد مجرد مصدر للمعلومات، بل هو بيئة ديناميكية توفر للمستخدمين
+              فرصًا متعددة للتفاعل والابتكار، وهو يشكل جزءًا أساسيًا من حياتنا
+              اليومية ومنظومة الأعمال والتواصل الاجتماعي.
+            </p>
+
+            <div class="comntes mt-5">
+              <h3>3 تعليقات على هذا المنشور</h3>
+              <div class="box d-flex align-items-center border-bottom pb-3">
+                <div class="img">
+                  <img src="imges/Pages/SingleBlog/profile-img-1.jpg" alt="" />
+                </div>
+                <div class="me-3 my-0">
+                  <h3 class="m-0 fs-3">محمد عبدالعزيز</h3>
+                  <span class="text-body-tertiary">منذ 2 ساعات </span>
+                  <p>
+                    من خلال الويب، يمكن للأفراد والشركات تقديم خدمات ومعلومات
+                    متنوعة بسهولة
+                  </p>
+                  <p>رد</p>
+                </div>
+              </div>
+
+              <div
+                class="box d-flex align-items-center mt-2 border-bottom pb-3"
+              >
+                <div class="img">
+                  <img src="imges/Pages/SingleBlog/profile-img-2.jpg" alt="" />
+                </div>
+                <div class="me-3 my-0">
+                  <h3 class="m-0 fs-3">محمد عبدالعزيز</h3>
+                  <span class="text-body-tertiary">منذ 2 ساعات </span>
+                  <p>
+                    من خلال الويب، يمكن للأفراد والشركات تقديم خدمات ومعلومات
+                    متنوعة بسهولة
+                  </p>
+                  <p>رد</p>
+                </div>
+              </div>
+
+              <div
+                class="box d-flex align-items-center mt-2 border-bottom pb-3"
+              >
+                <div class="img">
+                  <img src="imges/Pages/SingleBlog/profile-img-3.jpg" alt="" />
+                </div>
+                <div class="me-3 my-0">
+                  <h3 class="m-0 fs-3">محمد عبدالعزيز</h3>
+                  <span class="text-body-tertiary">منذ 2 ساعات </span>
+                  <p>
+                    من خلال الويب، يمكن للأفراد والشركات تقديم خدمات ومعلومات
+                    متنوعة بسهولة
+                  </p>
+                  <p>رد</p>
+                </div>
+              </div>
+            </div>
+
+            <form class="my-5 row">
+              <div class="form-group col-md-6">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="ادخل الايميل "
+                />
+              </div>
+              <div class="form-group col-md-6 mt-2">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="ادخل اسمك"
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">التعليق </label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-warning mt-3 text-body fs-5">ارسل التعليق </button>
+            </form>
+          </div>
+          <div class="col-md-4">
+            <form class="position-relative">
+              <input
+                type="search"
+                class="form-control pe-5"
+                placeholder="search"
+                aria-label="search"
+                aria-describedby="basic-addon1"
+              />
+              <div class="search-icon border">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </form>
+
+            <div class="border p-0 mt-3">
+              <h2 class="border p-2">المشاركات الاخيرة</h2>
+              <ul class="list-group-numbered">
+                <li class="d-flex align-items-start">
+                  <i class="fa-solid fa-caret-left mt-3 ms-2"></i>
+                  <a href="" class="d-block m-0">
+                    <p class="m-0 p-0 text-black fs-4">
+                      عنوان المدونة يذهب إلى هنا
+                    </p>
+                    <span class="fs-5 text-grey">24 مايو 2021</span>
+                  </a>
+                </li>
+                <li class="d-flex align-items-start">
+                  <i class="fa-solid fa-caret-left mt-3 ms-2"></i>
+                  <a href="" class="d-block m-0">
+                    <p class="m-0 p-0 text-black fs-4">
+                      عنوان المدونة يذهب إلى هنا
+                    </p>
+                    <span class="fs-5 text-grey">24 مايو 2021</span>
+                  </a>
+                </li>
+                <li class="d-flex align-items-start">
+                  <i class="fa-solid fa-caret-left mt-3 ms-2"></i>
+                  <a href="" class="d-block m-0">
+                    <p class="m-0 p-0 text-black fs-4">
+                      عنوان المدونة يذهب إلى هنا
+                    </p>
+                    <span class="fs-5 text-grey">24 مايو 2021</span>
+                  </a>
+                </li>
+                <li class="d-flex align-items-start">
+                  <i class="fa-solid fa-caret-left mt-3 ms-2"></i>
+                  <a href="" class="d-block m-0">
+                    <p class="m-0 p-0 text-black fs-4">
+                      عنوان المدونة يذهب إلى هنا
+                    </p>
+                    <span class="fs-5 text-grey">24 مايو 2021</span>
+                  </a>
+                </li>
+                <li class="d-flex align-items-start">
+                  <i class="fa-solid fa-caret-left mt-3 ms-2"></i>
+                  <a href="" class="d-block m-0">
+                    <p class="m-0 p-0 text-black fs-4">
+                      عنوان المدونة يذهب إلى هنا
+                    </p>
+                    <span class="fs-5 text-grey">24 مايو 2021</span>
+                  </a>
+                </li>
+                <li class="d-flex align-items-start">
+                  <i class="fa-solid fa-caret-left mt-3 ms-2"></i>
+                  <a href="" class="d-block m-0">
+                    <p class="m-0 p-0 text-black fs-4">
+                      عنوان المدونة يذهب إلى هنا
+                    </p>
+                    <span class="fs-5 text-grey">24 مايو 2021</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="border p-0 mt-3">
+              <h2 class="border p-2">فئات</h2>
+              <ul class="list-group-numbered">
+                <li class="d-flex align-items-center">
+                  <i class="fa-solid fa-caret-left ms-2"></i>
+                  <a href="" class="d-block fs-3 m-0 text-body"> بناء </a>
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="fa-solid fa-caret-left ms-2"></i>
+                  <a href="" class="d-block fs-3 m-0 text-body"> المعماري </a>
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="fa-solid fa-caret-left ms-2"></i>
+                  <a href="" class="d-block fs-3 m-0 text-body"> تجديد </a>
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="fa-solid fa-caret-left ms-2"></i>
+                  <a href="" class="d-block fs-3 m-0 text-body">
+                    إعادة البناء
+                  </a>
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="fa-solid fa-caret-left ms-2"></i>
+                  <a href="" class="d-block fs-3 m-0 text-body"> هندسة</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="border p-0 mt-3">
+              <h2 class="border p-2">العلامات</h2>
+              <ul class="list-group-numbered d-flex ">
+                <li class="ms-2  px-1 bg-body-secondary">
+                  <a class="text-body" href="">تثبيت</a>
+                </li>
+                <li class="ms-2  px-1 bg-body-secondary">
+                  <a class="text-body" href="">سباك</a>
+                </li>
+
+
+                <li class="ms-2  px-1 bg-body-secondary">
+                  <a class="text-body" href=""> قبل البناء</a>
+                </li>
+
+
+                <li class="ms-2  px-1 bg-body-secondary">
+                  <a class="text-body" href="">تجديد بناء</a>
+                </li>
+
+
+            
+
+
+              </ul>
+            </div>
+
+
+
+          </div>        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3">
+              <div class="img">
+                <img src="imges/HomePage/logo.png" alt="" />
+              </div>
+              <div class="content">
+                <p>نحن مستعدون لمساعدتك دائما.</p>
+                <p>210-2750 شارع كوادرا، فيكتوريا، كندا</p>
+                <p class="conact">الهاتف: +324-5442-415</p>
+                <p class="conact">فاكس: +324-5442-415</p>
+                <p class="conact">
+                  البريد الإلكتروني: support@construction.com
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h3>روابط سريعة</h3>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="text-warning d-flex align-items-center" href="#">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    <span class="me-2">الرئيسية</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a class="text-warning d-flex align-items-center" href="#">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    <span class="me-2">عن</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a class="text-warning d-flex align-items-center" href="#">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    <span class="me-2">خدمات</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a class="text-warning d-flex align-items-center" href="#">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    <span class="me-2">المشاريع</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="text-warning d-flex align-items-center" href="#">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    <span class="me-2">صلة العرض</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="text-warning d-flex align-items-center" href="#">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    <span class="me-2">مدونة</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="text-warning d-flex align-items-center" href="#">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    <span class="me-2">اتصال</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h3>المنشور الاخير</h3>
+
+              <div class="d-flex align-items-center pb-3 border-bottom">
+                <div class="">
+                  <img
+                    width="100%"
+                    src="imges/footer/footer-thumb-img-1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="me-3 mb-2 fs-7">
+                  <p class="m-0">شركة بناء</p>
+                  <p class="m-0">10 يونيو 2021</p>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center pb-3 border-bottom">
+                <div class="">
+                  <img
+                    width="100%"
+                    src="imges/footer/footer-thumb-img-1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="me-3 mb-2 fs-7">
+                  <p class="m-0">شركة بناء</p>
+                  <p class="m-0">10 يونيو 2021</p>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center pb-3 border-bottom">
+                <div class="">
+                  <img
+                    width="100%"
+                    src="imges/footer/footer-thumb-img-1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="me-3 mb-2 fs-7">
+                  <p class="m-0">شركة بناء</p>
+                  <p class="m-0">10 يونيو 2021</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <h3>اتصل بنا</h3>
+              <p>
+                اشترك في النشرة الإخبارية لدينا للحصول على أخبار مهمة وعروض
+                مذهلة وأخبار داخلية:
+              </p>
+              <div class="position-relative">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control input-scrip"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="البريد الإلكتروني"
+                  />
+                </div>
+                <div>
+                  <button class="btn btn-warning btn-scrip text-white fs-7">
+                    إرسال
+                  </button>
+                </div>
+              </div>
+              <div class="icon"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="botom">
+        <div class="container">
+          <div class="text-center d-flex justify-content-between fs-5">
+            <p>© 2021 جميع الحقوق محفوظة</p>
+            <p>الشروط والأحكام | سياسة الخصوصية</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="Scroll-Top">
+      <a href="#"> <i class="fa-solid fa-jet-fighter-up"></i></a>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/color-modes.js"></script>
+  </body>
+</html>

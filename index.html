@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bootstarp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="Your Website Description"/>
+    <meta name="copyright" content="Your Company Or Brand Name" />
+
+  </head>
+  <body>
+    <div class="dark-mode">
+      <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+          <path
+            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+          />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+          <path
+            d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+          />
+          <path
+            d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+          />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+          <path
+            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+          />
+        </symbol>
+      </svg>
+    </div>
+
+    <!-- * NAV BAR  -->
+
+    <nav class="navbar position-fixed w-100 navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img class="logo" src="imges/HomePage/logo.png" alt="" />
+        </a>
+
+        <div class="dropdown position-fixed dark mb-3 me-3 bd-mode-toggle">
+          <button
+            class="btn border-0 fs-4 dropdown-toggle d-flex align-items-center"
+            id="bd-theme"
+            type="button"
+            aria-expanded="false"
+            data-bs-toggle="dropdown"
+            aria-label="Toggle theme (auto)"
+          >
+            <svg
+              class="bi my-1 theme-icon-active ms-2"
+              width="1em"
+              height="1em"
+            >
+              <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+          </button>
+
+          <ul
+            class="dropdown-menu dropdown-menu-end shadow"
+            aria-labelledby="bd-theme-text"
+          >
+            <li>
+              <button
+                type="button"
+                class="dropdown-item d-flex align-items-center"
+                data-bs-theme-value="light"
+                aria-pressed="false"
+              >
+                <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                  <use href="#sun-fill"></use>
+                </svg>
+                Light
+                <svg class="bi ms-auto d-none" width="1em" height="1em">
+                  <use href="#check2"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="dropdown-item d-flex align-items-center"
+                data-bs-theme-value="dark"
+                aria-pressed="false"
+              >
+                <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                  <use href="#moon-stars-fill"></use>
+                </svg>
+                Dark
+                <svg class="bi ms-auto d-none" width="1em" height="1em">
+                  <use href="#check2"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="dropdown-item d-flex align-items-center active"
+                data-bs-theme-value="auto"
+                aria-pressed="true"
+              >
+                <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                  <use href="#circle-half"></use>
+                </svg>
+                Auto
+                <svg class="bi ms-auto d-none" width="1em" height="1em">
+                  <use href="#check2"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >الصفحة الرئيسة</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">مدونة</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                صفحات
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">صفحة 1</a></li>
+                <li><a class="dropdown-item" href="#">صفحة 2 </a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">صفحة3 </a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">عنا</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">خدمات</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">المشاريع</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">صالة عرض</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">اتصال</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- * NAV BAR  -->
+    <div class="py-4"></div>
+    <!-- Home -->
+
+    <section class="section home">
+      <div class="container">
+        <div class="home-item">
+          <h2>قوية الانسهار قالب البناء الحد الادني</h2>
+          <p class="my-4">
+            نسعي لتحقيق احلام عملاننا من خال الجمع بين افكارهم واسلوب حياتهم
+            وميزانيتهم وتجربتنا الخاصة
+          </p>
+          <button class="btn btn-warning">طلب اقتباس</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section done-Project">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-12 col-md-5">
+            <h2 class="titel">دون والغبار</h2>
+            <p class="my-5">
+              ونحن نسعي عملانا من خلال الجمع بين افكارهم ونمط الحياة والميزانية
+              مع تجربتنا الخاصة والخبرة وافضل الممارسات
+            </p>
+            <button
+              class="btn btn-lg hover-btn border-0 d-flex align-items-center btn-warning border border-black"
+            >
+              <i class="fa-solid fa-arrow-right-long ms-2"></i>
+              <span>عرض جميع المشاريع </span>
+            </button>
+          </div>
+
+          <div class="col-12 col-md-7">
+            <div id="carouselExample" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="imges/HomePage/Done-projects/project-slide1.jpg"
+                    class="d-block w-100 border border"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="imges/HomePage/Done-projects/project-slide2.jpg"
+                    class="d-block w-100 border border"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="imges/HomePage/Done-projects/project-slide3.jpg"
+                    class="d-block w-100 border border"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="News section bg-body-secondary">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="img">
+              <img src="imges/HomePage/news/service-item-bg-1.jpg" alt="" />
+            </div>
+            <div class="info">
+              <h3>أفضل البناء</h3>
+              <p class="my-4">
+                الشركة نفسها هي شركة ناجحة جدا. أيّ ومن ثم ليس في الإطراء
+                الظاهري للحياة. أي نوع من المشاكل هنا يمكن توقعه ومن دواعي سروري
+                أن يتخلوا في كثير من الأحيان عن تدريبهم إنها كلماته.
+              </p>
+              <button class="btn btn-lg border border-black hover-btn my-4">
+                <i class="fa-solid fa-arrow-right-long"></i>
+                <span>عرض التفاصيل</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="img">
+              <img src="imges/HomePage/news/service-item-bg-2.jpg" alt="" />
+            </div>
+            <div class="info">
+              <h3>أفضل البناء</h3>
+              <p class="my-4">
+                الشركة نفسها هي شركة ناجحة جدا. أيّ ومن ثم ليس في الإطراء
+                الظاهري للحياة. أي نوع من المشاكل هنا يمكن توقعه ومن دواعي سروري
+                أن يتخلوا في كثير من الأحيان عن تدريبهم إنها كلماته.
+              </p>
+              <button class="btn btn-lg border border-black hover-btn my-4">
+                <i class="fa-solid fa-arrow-right-long"></i>
+                <span>عرض التفاصيل</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <h3 class="titel mb-5">الاخبار المهمه</h3>
+            <div class="row">
+              <div class="col-3">
+                <img
+                  width="100%"
+                  src="imges/HomePage/news/news-thumb-1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-9">
+                <p class="border-bottom pb-4">
+                  <a class="text-body-emphasis" href=""
+                    >يساعد تطبيق البناء مشرفي البناء على وضع السلامة في المقام
+                    الأول</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="row my-3">
+              <div class="col-3">
+                <img
+                  width="100%"
+                  src="imges/HomePage/news/news-thumb-1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-9">
+                <p class="border-bottom pb-4">
+                  <a class="text-body-emphasis" href=""
+                    >يساعد تطبيق البناء مشرفي البناء على وضع السلامة في المقام
+                    الأول</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="row my-3">
+              <div class="col-3">
+                <img
+                  width="100%"
+                  src="imges/HomePage/news/news-thumb-1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-9">
+                <p class="border-bottom pb-4">
+                  <a class="text-body-emphasis" href=""
+                    >يساعد تطبيق البناء مشرفي البناء على وضع السلامة في المقام
+                    الأول</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section CHOOSE-US">
+      <div class="container">
+        <h2 class="titel mb-5">لماذا أخترتنا</h2>
+
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="row">
+              <div class="col-md-6 col-12 mb-4">
+                <img
+                  src="imges/HomePage/choose-us/choose-us-img-1.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="col-md-6 col-12">
+                <div class="data-info px-2">
+                  <h3>الواقعية</h3>
+                  <p>
+                    الشركة نفسها هي شركة ناجحة جدا. أيّ ومن ثم ليس في الإطراء
+                    الظاهري للحياة. أي نوع من المشاكل هنا يمكن توقعه ومن دواعي
+                    سروري أن يتخلوا في كثير من الأحيان عن تدريبهم إنها كلماته.
+                  </p>
+                  <h3>الواقعية</h3>
+                  <p>
+                    الشركة نفسها هي شركة ناجحة جدا. أيّ ومن ثم ليس في الإطراء
+                    الظاهري للحياة. أي نوع من المشاكل هنا يمكن توقعه ومن دواعي
+                    سروري أن يتخلوا في كثير من الأحيان عن تدريبهم إنها كلماته.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="row">
+              <div class="col-md-6 col-12 mb-4">
+                <img
+                  src="imges/HomePage/choose-us/choose-us-img-2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-md-6 col-12">
+                <div class="data-info px-2">
+                  <h3>الواقعية</h3>
+                  <p>
+                    الشركة نفسها هي شركة ناجحة جدا. أيّ ومن ثم ليس في الإطراء
+                    الظاهري للحياة. أي نوع من المشاكل هنا يمكن توقعه ومن دواعي
+                    سروري أن يتخلوا في كثير من الأحيان عن تدريبهم إنها كلماته.
+                  </p>
+                  <h3>الواقعية</h3>
+                  <p>
+                    الشركة نفسها هي شركة ناجحة جدا. أيّ ومن ثم ليس في الإطراء
+                    الظاهري للحياة. أي نوع من المشاكل هنا يمكن توقعه ومن دواعي
+                    سروري أن يتخلوا في كثير من الأحيان عن تدريبهم إنها كلماته.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-3 border-top border-bottom py-3">
+          <div class="col-12 col-md-4">
+            <div class="d-flex align-items-center">
+              <div class="bg-warning box-icon">
+                <i class="fa fa-heart icon"></i>
+              </div>
+              <div class="info me-3">
+                <h3 class="fs-3">تجديد</h3>
+                <p class="fs-5">
+                  تتوفر مجالات خبرتنا المتنوعة على أساس استشاري كدعم إضافي
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="d-flex align-items-center">
+              <div class="bg-warning box-icon">
+                <i class="fa fa-heart icon"></i>
+              </div>
+              <div class="info me-3">
+                <h3 class="fs-3">تجديد</h3>
+                <p class="fs-5">
+                  تتوفر مجالات خبرتنا المتنوعة على أساس استشاري كدعم إضافي
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="d-flex align-items-center">
+              <div class="bg-warning box-icon">
+                <i class="fa fa-heart icon"></i>
+              </div>
+              <div class="info me-3">
+                <h3 class="fs-3">تجديد</h3>
+                <p class="fs-5">
+                  تتوفر مجالات خبرتنا المتنوعة على أساس استشاري كدعم إضافي
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="media">
+      <p class="text-black text-center pt-5 fs-1">من نحن</p>
+      <div class="icon">
+        <i class="fa-solid fa-play"></i>
+      </div>
+    </section>
+
+    <section class="section TESTIMONIALS">
+      <div class="container">
+        <h2 class="titel mb-5">شهاداتنا</h2>
+
+        <div class="row">
+          <div class="col-md-4 col-12 border-bottom my-4 py-3">
+            <div class="box d-flex align-items-start">
+              <div class="img ms-3">
+                <img
+                  src="imges/HomePage/testimonial/profile-img-1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="info-text">
+                <p class="text-body-secondary fs-5">
+                  الشركة نفسها هي شركة ناجحة جدا. أيّ ومن ثم ليس في الإطراء
+                  الظاهري للحياة. أي نوع من المشاكل هنا يمكن توقعه ومن دواعي
+                  سروري أن يتخلوا في كثير من الأحيان عن تدريبهم إنها كلماته.
+                </p>
+                <span class="d-block fw-bold fs-3">محمد احمد </span>
+                <span class="fs-4">مصمم</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 border-bottom my-4 py-3">
+            <div class="box d-flex align-items-start">
+              <div class="img ms-3">
+                <img
+                  src="imges/HomePage/testimonial/profile-img-1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="info-text">
+                <p class="text-body-secondary fs-5">
+                  الشركة نفسها هي شركة ناجحة جدا. أيّ ومن ثم ليس في الإطراء
+                  الظاهري للحياة. أي نوع من المشاكل هنا يمكن توقعه ومن دواعي
+                  سروري أن يتخلوا في كثير من الأحيان عن تدريبهم إنها كلماته.
+                </p>
+                <span class="d-block fw-bold fs-3">محمد احمد </span>
+                <span class="fs-4">مصمم</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 border-bottom my-4 py-3">
+            <div class="box d-flex align-items-start">
+              <div class="img ms-3">
+                <img
+                  src="imges/HomePage/testimonial/profile-img-1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="info-text">
+                <p class="text-body-secondary fs-5">
+                  الشركة نفسها هي شركة ناجحة جدا. أيّ ومن ثم ليس في الإطراء
+                  الظاهري للحياة. أي نوع من المشاكل هنا يمكن توقعه ومن دواعي
+                  سروري أن يتخلوا في كثير من الأحيان عن تدريبهم إنها كلماته.
+                </p>
+                <span class="d-block fw-bold fs-3">محمد احمد </span>
+                <span class="fs-4">مصمم</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="SUBSCRIBE section">
+      <div class="content">
+        <h3>اشترك في نشرتنا الإخبارية</h3>
+        <p>
+          قم بالتسجيل في النشرة الإخبارية لدينا وكن أول من يعرف عن آخر أخبار
+          الشركة والعروض الخاصة والخصومات.
+        </p>
+
+        <div class="frm">
+          <input type="text" class="border" placeholder="name@exmpel.com" />
+          <button class="btn btn-warning text-white">يشترك</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section blog">
+      <div class="container">
+        <h3 class="titel">آخر أخبارنا</h3>
+
+        <div class="row">
+          <div class="col-md-4 my-3">
+            <div class="card">
+              <div class="img">
+                <img
+                  src="imges/HomePage/blog/blog-bg-1.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <span>28 مايو 2021</span>
+                <h5 class="card-title">مصدرك لرصد بيانات السوق اليوم...</h5>
+                <p class="card-text">
+                  الشركة نفسها هي شركة ناجحة جدا. أيّ ومن ثم ليس في الإطراء
+                  الظاهري للحياة. أي نوع من المشاكل هنا يمكن توقعه ومن دواعي
+                  سروري أن يتخلوا في كثير من الأحيان عن تدريبهم إنها كلماته.
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-rabea border border-2 d-flex align-items-center"
+                >
+                  <i class="fa-solid fa-arrow-left ms-3"></i>
+                  <span> اقرأ أكثر</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 my-3">
+            <div class="card">
+              <div class="img">
+                <img
+                  src="imges/HomePage/blog/blog-bg-2.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <span>28 مايو 2021</span>
+                <h5 class="card-title">مصدرك لرصد بيانات السوق اليوم...</h5>
+                <p class="card-text">
+                  الشركة نفسها هي شركة ناجحة جدا. أيّ ومن ثم ليس في الإطراء
+                  الظاهري للحياة. أي نوع من المشاكل هنا يمكن توقعه ومن دواعي
+                  سروري أن يتخلوا في كثير من الأحيان عن تدريبهم إنها كلماته.
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-rabea border border-2 d-flex align-items-center"
+                >
+                  <i class="fa-solid fa-arrow-left ms-3"></i>
+                  <span> اقرأ أكثر</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 my-3">
+            <div class="card">
+              <div class="img">
+                <img
+                  src="imges/HomePage/blog/blog-bg-3.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <span>28 مايو 2021</span>
+                <h5 class="card-title">مصدرك لرصد بيانات السوق اليوم...</h5>
+                <p class="card-text">
+                  الشركة نفسها هي شركة ناجحة جدا. أيّ ومن ثم ليس في الإطراء
+                  الظاهري للحياة. أي نوع من المشاكل هنا يمكن توقعه ومن دواعي
+                  سروري أن يتخلوا في كثير من الأحيان عن تدريبهم إنها كلماته.
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-rabea border border-2 d-flex align-items-center"
+                >
+                  <i class="fa-solid fa-arrow-left ms-3"></i>
+                  <span> اقرأ أكثر</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3">
+              <div class="img">
+                <img src="imges/HomePage/logo.png" alt="" />
+              </div>
+              <div class="content">
+                <p>نحن مستعدون لمساعدتك دائما.</p>
+                <p>210-2750 شارع كوادرا، فيكتوريا، كندا</p>
+                <p class="conact">الهاتف: +324-5442-415</p>
+                <p class="conact">فاكس: +324-5442-415</p>
+                <p class="conact">
+                  البريد الإلكتروني: support@construction.com
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h3>روابط سريعة</h3>
+              <ul class="list-unstyled">
+                <li>
+                  <a class="text-warning d-flex align-items-center" href="#">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    <span class="me-2">الرئيسية</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a class="text-warning d-flex align-items-center" href="#">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    <span class="me-2">عن</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a class="text-warning d-flex align-items-center" href="#">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    <span class="me-2">خدمات</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a class="text-warning d-flex align-items-center" href="#">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    <span class="me-2">المشاريع</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="text-warning d-flex align-items-center" href="#">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    <span class="me-2">صلة العرض</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="text-warning d-flex align-items-center" href="#">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    <span class="me-2">مدونة</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="text-warning d-flex align-items-center" href="#">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    <span class="me-2">اتصال</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h3>المنشور الاخير</h3>
+
+              <div class="d-flex align-items-center pb-3 border-bottom">
+                <div class="">
+                  <img
+                    width="100%"
+                    src="imges/footer/footer-thumb-img-1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="me-3 mb-2 fs-7">
+                  <p class="m-0">شركة بناء</p>
+                  <p class="m-0">10 يونيو 2021</p>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center pb-3 border-bottom">
+                <div class="">
+                  <img
+                    width="100%"
+                    src="imges/footer/footer-thumb-img-1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="me-3 mb-2 fs-7">
+                  <p class="m-0">شركة بناء</p>
+                  <p class="m-0">10 يونيو 2021</p>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center pb-3 border-bottom">
+                <div class="">
+                  <img
+                    width="100%"
+                    src="imges/footer/footer-thumb-img-1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="me-3 mb-2 fs-7">
+                  <p class="m-0">شركة بناء</p>
+                  <p class="m-0">10 يونيو 2021</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <h3>اتصل بنا</h3>
+              <p>
+                اشترك في النشرة الإخبارية لدينا للحصول على أخبار مهمة وعروض
+                مذهلة وأخبار داخلية:
+              </p>
+              <div class="position-relative">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control input-scrip"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="البريد الإلكتروني"
+                  />
+                </div>
+                <div>
+                  <button class="btn btn-warning btn-scrip text-white fs-7">
+                    إرسال
+                  </button>
+                </div>
+              </div>
+              <div class="icon"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="botom">
+        <div class="container">
+        <div class="text-center d-flex justify-content-between  fs-5">
+          <p>© 2021 جميع الحقوق محفوظة</p>
+          <p>الشروط والأحكام | سياسة الخصوصية</p>
+        </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+    <div class="Scroll-Top">
+     <a href="#"> <i class="fa-solid fa-jet-fighter-up"></i></a>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/color-modes.js"></script>
+  </body>
+</html>

@@ -1,0 +1,335 @@
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+.bd-mode-toggle {
+  z-index: 1500;
+}
+
+.bd-mode-toggle .dropdown-menu .active .bi {
+  display: block !important;
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+  font-family: lateef;
+  scroll-behavior: smooth;
+}
+.bd-mode-toggle {
+  left: 10px;
+}
+
+.section {
+  padding: 80px 0;
+}
+a {
+  text-decoration: none;
+}
+
+/* navbar */
+.navbar {
+  box-shadow: 1px 2px 3px rgba(108, 108, 108, 0.347);
+}
+.navbar a {
+  font-size: 20px;
+}
+.logo {
+  width: 50px;
+}
+.dark {
+  top: 12px;
+  right: 0px;
+}
+.navbar-nav,
+.navbar-toggler,
+.navbar {
+  z-index: 9999999999999999999999;
+}
+.home {
+  background-image: url(../imges/HomePage/header-slide-bg/slide-bg-1.jpg);
+  background-size: cover;
+  height: 600px;
+  padding: 1px;
+}
+.home-item {
+  width: 50%;
+  margin-right: auto;
+  margin-top: 15%;
+  color: #fff;
+}
+
+.home-item h2 {
+  font-size: 40px;
+}
+.home-item p {
+  font-size: 20px;
+}
+
+.titel {
+  position: relative;
+  width: fit-content;
+  font-size: 35px;
+}
+.titel::after {
+  content: "";
+  height: 4px;
+  width: 90%;
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  background: #ffc107;
+}
+
+.done-Project .hover-btn,
+.News .hover-btn {
+  transition: 0.5s;
+}
+.done-Project .hover-btn:hover,
+.News .hover-btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+/*******== News  ==*******/
+.News .img {
+  margin-bottom: 10px;
+}
+.News .img img {
+  width: 100%;
+  height: 200px;
+}
+
+/*********CHOOSE-US******/
+.CHOOSE-US img {
+  width: 100%;
+}
+
+.CHOOSE-US .box-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+}
+.CHOOSE-US .box-icon .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+}
+
+/*********========= media =========*********/
+.media {
+  width: 100%;
+  background-image: url(../imges/HomePage/who-we-are-bg.jpg);
+  height: 380px;
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+.media .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff73;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: right !important;
+  direction: rtl;
+  overflow-x: hidden;
+}
+.media .icon i {
+  color: #ffc107;
+  font-size: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 35px;
+}
+
+.TESTIMONIALS img {
+  border-radius: 50%;
+  width: 100%;
+}
+.SUBSCRIBE {
+  background: url(../imges/HomePage/subscribe-our-newsletter-bg.jpg);
+  height: 502px;
+  background-size: cover;
+  background-color: #ddd;
+  background-position: center center;
+  position: relative;
+}
+.SUBSCRIBE .content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.SUBSCRIBE .content h3 {
+  font-size: 70px;
+  color: #ffff;
+}
+.SUBSCRIBE .content p {
+  color: #ddd;
+  font-size: 30px;
+}
+@media (max-width: 767px) {
+  .SUBSCRIBE .content h3 {
+    font-size: 40px;
+  }
+  .SUBSCRIBE .content p {
+    font-size: 20px;
+  }
+}
+
+.SUBSCRIBE .content .frm input {
+  width: 60% !important;
+  height: 40px;
+  outline: none;
+  border-radius: 6px;
+}
+.SUBSCRIBE .content .frm button {
+  height: 40px;
+}
+
+.blog .row .img {
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+.blog .row .img::before {
+  transition: 0.5s;
+}
+
+.blog .row .img:hover::before {
+  content: "";
+  position: absolute;
+  background-color: #ffffff67;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.5s;
+}
+.btn-rabea {
+  width: fit-content;
+  transition: 0.5s;
+}
+.btn-rabea:hover {
+  background-color: rgb(0, 115, 255);
+  color: #ddd;
+}
+
+footer .top {
+  background-color: #071c33;
+  color: #fff;
+  padding: 30px;
+}
+footer .top .content .conact {
+  color: #838181 !important;
+}
+.input-scrip {
+  border-radius: 15px;
+  padding-right: 73px;
+  height: 50px;
+}
+.btn-scrip {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 15px;
+  height: 50px;
+  width: 70px;
+}
+
+.list-unstyled i {
+  font-size: 10px;
+}
+footer .botom {
+  background-color: #042e5b;
+  color: #fff;
+  padding: 10px 0;
+}
+.Scroll-Top {
+  position: fixed;
+  z-index: 9999999;
+  background-color: #333;
+  bottom: 20px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 6px;
+}
+.Scroll-Top i {
+  font-size: 30px;
+  line-height: 50px;
+  scroll-behavior: smooth;
+}
+.Scroll-Top a {
+  color: #ffc107;
+  scroll-behavior: smooth;
+}
+
+.section-Breadcrumb {
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+}
+.Breadcrumb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Breadcrumb h1 {
+  font-size: 50px;
+}
+@media (max-width: 768px) {
+  .Breadcrumb {
+    display: block;
+    text-align: center;
+  }
+}
+
+.bg-eee {
+  background: #eee;
+}
+.text-grey {
+  color: grey;
+}
+.w-fit {
+  width: fit-content;
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  height: 37px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  line-height: 37px;
+  width: 30px;
+}
+.search-icon i {
+  margin-right: 5px;
+  color: #ffc107;
+}
+
+.comntes .img {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+.comntes img {
+  width: 100%;
+  border-radius: 50%;
+}
